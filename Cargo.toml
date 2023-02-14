@@ -5,8 +5,11 @@ edition = "2021"
 
 [dependencies]
 gdnative = "0.11"
-rb-sys = "0.9.56"
+rb-sys = { version = "0.9.65", features = ["link-ruby", "ruby-static"] }
 magnus = { git = "https://github.com/matsadler/magnus.git", rev = "52eeaad", features = ["embed", "ruby-static"] }
+
+[build-dependencies]
+rb-sys-env = "0.1.2"
 
 [lib]
 crate-type = ["cdylib"]
