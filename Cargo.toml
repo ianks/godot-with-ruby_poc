@@ -1,0 +1,12 @@
+[package]
+name = "ruby"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gdnative = "0.11"
+rb-sys = "0.9.56"
+magnus = { git = "https://github.com/matsadler/magnus.git", rev = "52eeaad", features = ["embed", "ruby-static"] }
+
+[lib]
+crate-type = ["cdylib"]
